@@ -1,0 +1,61 @@
+{
+  "A_subject": {
+    "name": "Subject",
+    "pipeline_target": "scene_assembly.subject_type",
+    "options": {
+      "human":   { "label": "Human",   "images": ["A. subject photos/A. human_.png"],  "phrase": "human subject, person-focused" },
+      "product": { "label": "Product", "images": ["A. subject photos/A. product_.jpg"], "phrase": "product-focused still life, clean object presentation, no human" }
+    }
+  },
+  "B_style": {
+    "name": "Style",
+    "pipeline_target": "scene_assembly.style / reality_model",
+    "options": {
+      "commercial_action":  { "label": "Commercial — Action", "images": ["B. style- narrative photos/b. Commercial.jpg"],    "phrase": "commercial advertising photography, dynamic action sports campaign, frozen motion, energetic, crisp natural daylight, aspirational" },
+      "commercial_fashion": { "label": "Commercial — Fashion","images": ["B. style- narrative photos/b. Commercial(1).jpg"], "phrase": "commercial advertising photography, aspirational fashion campaign, styled and polished, scenic location, clean product focus" },
+      "editorial":       { "label": "Editorial",       "images": ["B. style- narrative photos/b. Editorial.jpg"],       "phrase": "editorial magazine photography, styled and directional, high-fashion aesthetic" },
+      "lifestyle":       { "label": "Lifestyle",       "images": ["B. style- narrative photos/b. Lifestyle.jpg"],       "phrase": "lifestyle photography, candid and natural, real-world context, relatable" },
+      "emotionally_raw": { "label": "Emotionally Raw", "images": ["B. style- narrative photos/b. Emotionally raw.jpg"], "phrase": "emotionally raw, intimate documentary feel, unpolished authenticity" }
+    }
+  },
+  "C_angle": {
+    "name": "Camera Angle",
+    "pipeline_target": "composition_rendering.CameraPlan.perspective_intent",
+    "options": {
+      "eye_level":  { "label": "Eye Level",   "images": ["C. angle photos/c. eye angle.jpg"],       "perspective_intent": "eye_level",  "phrase": "eye-level shot, neutral natural perspective" },
+      "high_angle": { "label": "High Angle",  "images": ["C. angle photos/c. high angle_.jpg"],     "perspective_intent": "high_angle", "phrase": "high-angle shot looking down on the subject" },
+      "low_angle":  { "label": "Low Angle",   "images": ["C. angle photos/c. low angle_.jpg"],      "perspective_intent": "low_angle",  "phrase": "low-angle shot looking up, empowering the subject" },
+      "bird_eye":   { "label": "Bird's Eye",  "images": ["C. angle photos/c. birds eye view.jpg", "C. angle photos/c. birds eye view(1).jpg"], "perspective_intent": "bird_eye", "phrase": "bird's-eye view, directly overhead" },
+      "worm_eye":   { "label": "Worm's Eye",  "images": ["C. angle photos/c. worms eye view_.jpg"], "perspective_intent": "worm_eye",   "phrase": "worm's-eye view, extreme upward angle" }
+    }
+  },
+  "D_distance": {
+    "name": "Shot Distance",
+    "pipeline_target": "composition_rendering.CameraPlan.framing_intent / distance_intent",
+    "options": {
+      "extreme_close_up": { "label": "Extreme Close-Up",  "images": ["D. distance/d. extreme close up.webp"],  "framing_intent": "extreme_close_up", "distance_intent": "macro",       "phrase": "extreme close-up, macro detail" },
+      "close_up":         { "label": "Close-Up",          "images": ["D. distance/d. close up_"],              "framing_intent": "close_up",         "distance_intent": "near",        "phrase": "close-up shot, tight on the subject" },
+      "medium_shot":      { "label": "Medium Shot",        "images": ["D. distance/d. medium shot_.jpg"],       "framing_intent": "medium_shot",      "distance_intent": "mid",         "phrase": "medium shot, subject from the waist up" },
+      "full_shot":        { "label": "Full Shot",          "images": ["D. distance/d. full shot_.jpg"],         "framing_intent": "full_shot",        "distance_intent": "far",         "phrase": "full shot, entire subject in frame" },
+      "extreme_long":     { "label": "Extreme Long Shot",  "images": ["D. distance/d. extreme long shot_.jpg"], "framing_intent": "extreme_wide_shot","distance_intent": "extreme_far", "phrase": "extreme long shot, subject small within a vast environment" }
+    }
+  },
+  "E_lighting": {
+    "name": "Directional Lighting",
+    "pipeline_target": "composition_rendering.LightingPlan",
+    "options": {
+      "front": { "label": "Front Lighting", "images": ["E. Directional Lighting/e. front lighting_.jpg"], "phrase": "front lighting, even and flat illumination, minimal shadow" },
+      "side":  { "label": "Side Lighting",  "images": ["E. Directional Lighting/e. side lighting_.jpg"],  "phrase": "side lighting, directional chiaroscuro, sculpted form" },
+      "back":  { "label": "Back Lighting",  "images": ["E. Directional Lighting/e. back lighting_.jpg"],  "phrase": "backlighting, rim-lit silhouette, glowing edges" }
+    }
+  },
+  "F_exposure": {
+    "name": "Exposure / Shadow",
+    "pipeline_target": "composition_rendering.LightingPlan + luminance_priority",
+    "options": {
+      "high_key":   { "label": "High-Key", "images": ["F. Exposure-Shadows/f. highkey exposure_.jpg"], "phrase": "high-key exposure, bright even tones, minimal shadow, airy" },
+      "medium_key": { "label": "Medium",   "images": ["F. Exposure-Shadows/f. medium exposure.jpg"],   "phrase": "medium exposure, balanced lighting, properly exposed subjects, clear midtones, dark background contrast, sharp studio lighting, photorealistic" },
+      "low_key":    { "label": "Low-Key",  "images": ["F. Exposure-Shadows/f. lowkey exposure_.jpg"],  "phrase": "low-key exposure, deep shadows, dramatic high-contrast mood" }
+    }
+  }
+}
