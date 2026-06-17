@@ -1,0 +1,35 @@
+# Visual Prompt — CLEVER Clear Protein (Trial_02 Base — decision tree reference)
+
+Source: `Clever_Trial/Trial_02/[create_final_prompt_stream] 8a_prompt_compiler_raw.md`
+Framework: `8.1.1 Prompt_Compiler.md` v2.3 (flat prose, inline brand asset embedding)
+Decision tree: **no taxonomy options applied** — pipeline output only (Stages 0–8)
+
+This file is the unmodified base. All decision tree variants in this folder are built on top of this prompt, changing exactly one taxonomy dimension at a time.
+
+Current base values:
+| Layer | Value |
+|---|---|
+| A — Subject | human (office woman) |
+| B — Style | clean lifestyle advertising |
+| C — Angle | eye-level |
+| D — Distance | near medium shot |
+| E — Lighting | soft front / high-key |
+| F — Exposure | high-key |
+
+```yaml
+VisualPrompt: "A clean, bright lifestyle advertising photograph of a Hong Kong office woman in her late twenties taking an afternoon break at her desk — healthy and natural-looking, in light, polished-casual office wear, not gym clothes. She sits relaxed and quietly confident, lightly satisfied, holding a transparent shaker bottle of clear, pale-yellow lemon protein drink with a lemon slice inside; the drink is the hero of the image and must read as genuinely clear and translucent with light passing through it, never opaque or milky. Her expression is calm and guilt-free — a small moment of light self-care, no strain, no dieting anxiety, no performance. The transparent shaker, its clear pale-yellow lemon drink, and the CLEVER logo on the bottle come from a reference image: this is reference_asset_01 — reproduce it exactly: same bottle, same clear translucent drink, same lemon cue, same logo shape, color and proportions; do not redraw from memory, and use only the product and bottle from that image while ignoring its gym background and any person in it. On the desk just beside the shaker, nearer the camera than her face, stands a CLEVER 'CLEAR PROTEIN' lemon-flavor pouch, facing the camera and clearly legible — white pouch body, large blue 'CLEAR PROTEIN' typography, yellow lemon-flavor accent strip and badges; this is also reference_asset_01 — reproduce the packaging exactly: same shapes, same colors, same proportions, do not redraw from memory. The CLEVER wordmark and a legible 'Made in Japan / 日本製' cue also appear in the frame: this is reference_asset_02 — reproduce the logo exactly: same letterforms, same color, same proportions, do not redraw from memory, and do not copy the timing-clock graphic, pricing, or specific model from that reference. The setting is a bright, clean, minimal office desk in light sky-blue and white tones, tidy and airy — a small calm island in the workday — with a subtle afternoon cue such as a small desk clock reading near 3:30. Light it with soft, bright, high-key daylight: the clear drink and the pouch receive the cleanest, brightest light with a gentle specular glint on the glass and liquid, the woman is lit a touch softer, and the office behind her is exposed slightly down so that no window or background source blows out or outshines the product and drink; skin stays warm-neutral, never orange, with no studio flatness. Shoot at eye level, a near medium shot at desk distance so the viewer feels seated across from her, peer-level, with a 50mm lens at f/4: the foreground drink and pouch are crisply sharp, the woman is sharp to gently soft depending on her depth, and the office softens progressively with distance — the desk clock stays semi-legible while the far wall falls softer — with smooth, gentle, depth-dependent bokeh and no flat uniform blur layer. Render real human skin with visible pores, fine lines, subtle tone variation and natural asymmetry, a candid unposed expression and relaxed shoulders; keep the desk lived-in but tidy with natural reflections and everyday detail rather than an empty CGI set; render believable glass and liquid optics with light condensation on the shaker and true fabric behavior on her clothing. Credibility takes priority over perfection — no plastic, over-smoothed, beauty-filtered or 'AI-perfect' look. Avoid any thick, opaque or milky shake, any gym, dumbbells or muscular posing, any black supplement tubs, any before-after or weighing-scale weight-loss framing, any junk food or snack clutter, any grape variant, multi-pack lineup, outdoor running scene or clock/timing infographic, any blown-out window behind her, and any invented marketing slogans or paragraphs of text."
+
+ReferenceAssetManifest:
+  - asset_id: asset_01
+    filename: "reference_01.jpg"
+    type: Brand-Bearing
+    prompt_reference_id: reference_asset_01
+    attach_to_api_call: true
+    strictness: Exact
+  - asset_id: asset_04
+    filename: "reference_04.jpg"
+    type: Brand-Bearing
+    prompt_reference_id: reference_asset_02
+    attach_to_api_call: true
+    strictness: Exact
+```

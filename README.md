@@ -31,7 +31,6 @@ Run the stages in order — each one consumes the output of the previous.
 | `7.1 Synthesis.md` | 7 | Consolidate all contracts, resolve conflicts |
 | `8.2.1 Prompt_Compiler.md` | 8 | Translate to final image generation prompt |
 
-**Use the highest-numbered version of each stage** (e.g. `5.2.5` over `5.2` over `5`). Lower versions are kept as historical reference.
 
 ## Prompt Compiler Variants
 
