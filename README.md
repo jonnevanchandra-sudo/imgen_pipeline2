@@ -5,37 +5,49 @@ A structured, multi-stage framework for producing AI-generated advertising image
 ## How It Works
 
 ```
-Brand Intelligence → Campaign Brief → Strategy → Narrative → Art Direction
-                                                                    ↓
-                         Prompt Compiler ← Synthesis ← Composition & Rendering
-                               ↓                              ↓
-                         VisualPrompt                   Scene Assembly
+Brand Intelligence
+        ↓
+Campaign Brief
+        ↓
+Strategy
+        ↓
+Narrative
+        ↓
+Art Direction
+        ↓
+Image Analysis
+        ↓
+Scene Assembly
+        ↓
+Composition & Rendering
+        ↓
+Synthesis
+        ↓
+Prompt Compiler
+        ↓
+VisualPrompt
 ```
-
-Run the stages in order — each one consumes the output of the previous.
 
 ## Stages
 
-| File | Stage | What It Decides |
-|------|-------|-----------------|
-| `0. Brand Intelligence.v2.md` | 0 | What the brand actually is (extracted from real materials) |
-| `1.1 Campaign_Brief.md` | 1 | Campaign facts only — no strategy, no execution |
-| `1.5 Visual_Discovery.md` | 1.5 | Client aesthetic references (async, optional) |
-| `2. Strategy.md` | 2 | Which brand dimensions to activate for this campaign |
-| `3. Narrative.md` | 3 | Emotional arc and viewer transformation |
-| `4. Art-Direction-framework-v3.md` | 4 | Visual concept and structural density |
-| `5a Image_Analysis.md` | 5a | Extract attributes from client reference images (optional pre-step) |
-| `5.2.5 Scene-Assembly.md` | 5 | Scene blueprint — entities, spatial layout, reference asset locking |
-| `5.5 Client_Preference_Ingestion.md` | 5.5 | Codify client picks from Visual Discovery (optional) |
-| `6.1 Composition_Rendering.md` | 6 | Camera, lighting, depth of field, materials |
-| `7.1 Synthesis.md` | 7 | Consolidate all contracts, resolve conflicts |
-| `8.2.1 Prompt_Compiler.md` | 8 | Translate to final image generation prompt |
+| File | Stage | What It Decides | Inputs |
+|------|-------|-----------------|--------|
+| `0. Brand Intelligence.v2.md` | 0 | What the brand actually is (extracts data from website, images, etc) | Website link, images uploaded |
+| `1.2 Campaign_Brief.md` | 1 | Campaign facts only | prompt.md (result from campaign brainstorming) |
+| `2. Strategy.md` | 2 | Which brand dimensions to activate for this campaign | Brand Contract and Campaign Contract |
+| `3. Narrative.md` | 3 | Emotional arc and viewer transformation | Brand Contract and Strategy Contract |
+| `4. Art-Direction-framework-v3.md` | 4 | Visual interpretation and structural density | Strategy Contract and Narrative Contract |
+| `5a Image_Analysis.md` | 5a | Extract attributes from client reference images (optional pre-step, already combined in 5.2) | Reference images uploaded by the user |
+| `5.2 Scene-Assembly.md` | 5 | Entities, spatial layout (relative scale), reference asset locking | (Global Pipeline State) Art Direction Contract, Campaign Contract |
+| `6.1 Composition_Rendering.md` | 6 | Camera, lighting, depth of field, materials | Scene Contract |
+| `7.1 Synthesis.md` | 7 | Consolidate all contracts, resolve conflicts | Campaign Contract, Brand Contract, Strategy Contract, Narrative Contract, Art Direction Contract, Scene Contract, Composition Rendering Contract |
+| `8.2.1 Prompt_Compiler.md` | 8 | Translate to final image generation prompt | Synthesis Contract |
 
 
 ## Prompt Compiler Variants
 
-- `8.1.1` — flat prose string; works with Midjourney / DALL-E / Flux
-- `8.2.1` — JSON priority blocks for GPT Image 2.0 **(preferred)**
+- `8.1.1` — flat prose string
+- `8.2.1` — JSON priority blocks
 
 ## Trial Runs
 
