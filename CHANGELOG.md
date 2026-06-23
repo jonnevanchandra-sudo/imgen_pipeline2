@@ -3,44 +3,35 @@
 Entries below are ordered by where the stage sits in the pipeline (execution order).
 
 ```
-1.1 Campaign_Brief
-   ↓
-1.5 Visual_Discovery  (async — pipeline continues to 2 immediately)
+1.2 Campaign_Brief
    ↓
    ... Strategy → Narrative → Art Direction ...
    ↓
 5a Image_Analysis (Stage 5.0, optional pre-stage — only if reference images uploaded)
    ↓
-5.5 Client_Preference_Ingestion  (consumes 1.5's client response)
-   ↓
-5.2.5 Scene-Assembly  (canonical Stage 5 — supersedes 5/5.1/5.2; consumes 5.5's ClientPreferenceContract)
+5.2 Scene-Assembly  (also has 5a Image Analysis's function, haven't combined/separate)
    ↓
 6.1 Composition_Rendering
    ↓
 7.1 Synthesis
    ↓
 8.1.1 Prompt_Compiler ─┐
-8.2.1 Prompt_Compiler ─┴─ (alternative final compilers; 8.2.1 supersedes 8.2 for GPT Image 2.0)
+8.2.1 Prompt_Compiler ─┴─ (alternative final compilers)
 ```
 
-**Scene Assembly note:** `5`, `5.1`, and `5.2 Scene-Assembly.md` are kept as historical/reference files only. `5.2.5` is a strict superset of all three (named-product preservation from 5.1 + reference-image extraction from 5.2 + ClientPreferenceContract input) and is the only Scene Assembly file used in the active pipeline going forward.
 
 ---
 
 **1.1 Campaign_Brief.md** — new file, extends 1.0 without touching it
 - adds `ProductSpec` inside `MandatoryRequirements`
-- use this when a campaign needs a specific product model in the image (e.g. Nike Pegasus 41, not just "a Nike shoe")
-- captures: model name, colorway (optional), and 4 visual identifiers (sole, upper, silhouette, brand mark)
-- pairs with 5.1 — ProductSpec entries flow downstream as named entities
+- use this when a campaign needs a specific product model in the image
+- pairs with 5.2 — ProductSpec entries flow downstream as named entities
 
 ---
 
-**1.5 Visual_Discovery.md** — new file, v1.0
-- new stage, runs immediately after Stage 1 (CampaignContract complete), before Stage 2
-- generates a `VisualDiscoveryPackage` of curated reference archetypes (visual_description, emotional_tone, genre_reference, google_image_query) for the client to react to
-- does not make visual decisions — Art Direction (Stage 4) still derives all visual direction from brand/strategic context alone
-- pipeline does not wait: Stage 2 begins immediately, client response is asynchronous
-- client's picks are codified later by Stage 5.5 and consumed by Scene Assembly (5.2.5) as optional input
+**1.2 Campaign_Brief.md** — new file, canonical Campaign Brief; absorbs 1.0 + 1.1 into one stage
+- strict superset of 1.0 and 1.1 — `ProductSpec` is optional inside `MandatoryRequirements`; omit it and this behaves exactly like 1.0
+- 1.0 and 1.1 kept in the repo as historical/reference only, same relationship 5.2 has to 5/5.1
 
 ---
 
@@ -53,24 +44,11 @@ Entries below are ordered by where the stage sits in the pipeline (execution ord
 
 ---
 
-**5.5 Client_Preference_Ingestion.md** — new file, v1.0
-- new stage, runs after Stage 4 (Art Direction), before Stage 5.2.5
-- receives the client's response to the Visual Discovery Package (Stage 1.5) and codifies it into a `ClientPreferenceContract`
-- extracts signals (lighting, color_palette, subject_scale, emotional_tone, genre) from selected archetypes, and avoidance signals from rejected archetypes
-- sets `aesthetic_confidence` (High/Medium/Low) based on how clear and specific the client's picks/rejections are
-- does not make creative decisions or override brand/strategy — conflicts go to `ClientConfirmationRequired`, resolved by Synthesis
-- if the client hasn't responded yet, this stage is skipped entirely and Stage 5.2.5 behaves identically to 5.2
-
----
-
-**5.2.5 Scene-Assembly.md** — new file, canonical Stage 5, supersedes 5 / 5.1 / 5.2
+**5.2 Scene-Assembly.md** — new file, canonical Stage 5, supersedes 5 / 5.1
 - adds named product preservation (from 5.1): if CampaignContract has a `ProductSpec`, locks model name + visual descriptors together as immutable
-- adds reference image extraction (from 5.2): reads each uploaded file directly, extracts immutable attributes by observation, assigns `asset_id` / `entity_id` / `prompt_reference_id` per asset, outputs `ReferenceAssetManifest` alongside SceneContract
-- adds one new optional input on top of 5.2: `ClientPreferenceContract` from Stage 5.5 — when present, informs **flexible attribute** decisions only within PreservationContracts (selected signals resolve flexible attributes toward client preference, avoidance signals resolve away from it)
 - cannot override immutable attributes, brand/strategic direction, or scene construction decisions
 - conflicts between client signals and upstream constraints are recorded as `ClientPreferenceConflicts` and deferred to Synthesis (Stage 7)
 - when none of ProductSpec / reference images / ClientPreferenceContract are present, behaves identically to base Scene Assembly (5)
-- `5`, `5.1`, `5.2 Scene-Assembly.md` retained as historical/reference files only — not used in new pipeline runs
 
 ---
 

@@ -42,54 +42,6 @@ Image Analysis extracts what IS. Creative layers decide what to DO with it.
 
 **Skip when:** No reference images are provided — proceed directly to Stage 5 (Scene Assembly) with full generation mode.
 
----
-
-# Client Intent Declaration
-
-Before analysis begins, the client must declare their intent for each uploaded image. Do not assume intent from image type alone — a client may upload a venue photo purely for style reference, or upload a person photo only to establish clothing style, not to lock identity. If the client haven't declared about their intent, ask the client about their intention.
-
-## Required Questions (ask before extraction)
-
-For each uploaded image, ask:
-
-**1. What do you want to lock from this image?**
-
-| Lock Category | What it means |
-|---|---|
-| Characters / People | This specific person's face, body type, and identity must appear in the generated image |
-| Environment / Venue | This specific space — its color palette, architecture, lighting character — must be reproduced |
-| Products / Equipment | This specific object — its shape, colorway, and brand markings — must appear |
-| Brand Assets | This logo, signage, or brand mark must appear exactly as shown |
-| Composition / Template | The layout logic — where subjects are placed, where text zones fall, depth structure — should reference this image |
-| Style Only | Do not lock anything specific — use this image to inform rendering mood, color register, or photography style only |
-
-**2. For anything you want locked: how strictly?**
-
-| Strictness Level | Meaning |
-|---|---|
-| Exact Match | Must be recognizably identical — a viewer who knows the real person/place would confirm it |
-| Close Match | Must feel consistent and coherent, but minor adaptation to lighting/scene is acceptable |
-| Reference Only | Use as a starting point — creative layers may adapt significantly |
-
-**3. Is there anything in this image you specifically do NOT want carried over?**
-
-Examples: a client uploads a venue photo but the signage in it belongs to a competitor — they want the space, not the signs. Or they upload a person photo but the outfit is from a different campaign and must not appear.
-
-## Client Intent Record
-
-Document answers before proceeding to extraction:
-
-```
-Asset: [filename]
-Lock categories: [list from table above]
-Strictness: [Exact / Close / Reference]
-Exclusions: [anything explicitly not to carry over, or "none"]
-```
-
-This record governs which extracted attributes become immutable vs. flexible in the PreservationContract. Client intent overrides asset type defaults.
-
----
-
 # Input
 
 ## Uploaded Reference Images
