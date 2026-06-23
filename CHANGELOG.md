@@ -15,7 +15,7 @@ Entries below are ordered by where the stage sits in the pipeline (execution ord
    ↓
 7.1 Synthesis
    ↓
-8.1.1 Prompt_Compiler ─┐
+8.1.1 Prompt_Compiler ─┐ (main compiler)
 8.2.1 Prompt_Compiler ─┴─ (alternative final compilers)
 ```
 
@@ -35,19 +35,16 @@ Entries below are ordered by where the stage sits in the pipeline (execution ord
 
 ---
 
-**5a Image_Analysis.md** (Stage 5.0) — new file, pre-processing stage before Stage 5
+**5a Image_Analysis.md** — new file, pre-processing stage before Stage 5
 - runs before Scene Assembly when client uploads reference assets (people, venues, products, brand assets)
-- requires a Client Intent Declaration per image (what to lock, how strictly, what to exclude) before extraction
 - classifies each asset, separates Observable/Inferred/Uncertain attributes with confidence scores, assigns entity IDs and PreservationContracts
-- produces ImageAnalysisContract consumed by Scene Assembly as optional input
-- **naming clarification:** `5.0` is a separate stage that runs *before* Stage 5 — it is not a variant of Scene Assembly. `5.1` is the extended drop-in replacement *for* Stage 5 itself. When both are in play: 5.0 → 5.1 → 6, not 5.0 → 5 → 5.1.
+- produces ImageAnalysisContract consumed by Scene Assembly
 
 ---
 
 **5.2 Scene-Assembly.md** — new file, canonical Stage 5, supersedes 5 / 5.1
 - adds named product preservation (from 5.1): if CampaignContract has a `ProductSpec`, locks model name + visual descriptors together as immutable
 - cannot override immutable attributes, brand/strategic direction, or scene construction decisions
-- conflicts between client signals and upstream constraints are recorded as `ClientPreferenceConflicts` and deferred to Synthesis (Stage 7)
 - when none of ProductSpec / reference images / ClientPreferenceContract are present, behaves identically to base Scene Assembly (5)
 
 ---
