@@ -66,7 +66,7 @@ VisualPrompt
       Inputs : Brand Contract & Strategy Contract
       Output : Narrative Contract
       Idea : Goal of this is to understand what transformation do we want the viewer to have. From who he/she was --> to who he/she became
-4.Art-Direction-framework-v3.md
+- 4.Art-Direction-framework-v3.md
       Inputs : Strategy Contract and Narrative Contract
       1. Strategy Contract
             - Strategic Direction : goal & the direction for this campaign
@@ -79,7 +79,7 @@ VisualPrompt
             - Viewer Takeaway
             All of which is talking "What do we want for the viewer to take from this image?"
             Objective is: Emotional Meaning --> Visual Interpretation
-5a.Image_Analysis.md
+- 5a.Image_Analysis.md
       Notes : Also in 5.2 Scene Assembly, no need separate file. Still in consideration if we should separate it from scene assembly or not. In Scene Assembly, this is Reference Asset Extraction Block
       Inputs : Reference Images, Brand Contract, Campaign contract
       Output : 05a_Image Analysis Contract
@@ -94,7 +94,7 @@ VisualPrompt
             3. Extract Observable Attributes
             4. Separate Immutable vs Flexible (Attributs not style) --> Let the AI infer itself which is which accroding to the brand & campiagn contract
       Goal is to understand what it IS, not what to do
-5.2Scene-Assembly.md
+- 5.2Scene-Assembly.md
       Inputs : Art Direction, Campaign Contract, and Image Analysis Contract
       New : 
       1. Reference Asset Extraction Block (Same as 5a)
@@ -105,7 +105,7 @@ VisualPrompt
             - What each entity is doing e.g. Holding a cup, etc
             - Relative Scale (e.g. human to a machine)
             - Generation Requirement e.g. Clean background
-6.1Composition_Rendering.md
+- 6.1Composition_Rendering.md
       Inputs : Scene Contract
       Job of Composition Rendering:
             - Lighting hierarchy
@@ -113,7 +113,7 @@ VisualPrompt
             - Rendering behaviour
             - Camera Behaviour
             Sensory embodiment : making the images feel real (light hitting the skin, fabric texture, etc)
-7.1 Synthesis.md
+- 7.1 Synthesis.md
       Inputs : All contract
       Job : Summarize everything
 
