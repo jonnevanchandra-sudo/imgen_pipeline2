@@ -44,6 +44,7 @@ VisualPrompt
 | `8.1.1 Prompt_Compiler.md` | 8 | Translate to final image generation prompt | Synthesis Contract |
 
 ## Stages Explanation
+```
 - 0.Brand Intelligence.v2.md
       Inputs : Link and images from the brand
       Outputs : Contract.md (style of the brand)
@@ -116,7 +117,7 @@ VisualPrompt
 - 7.1 Synthesis.md
       Inputs : All contract
       Job : Summarize everything
-
+```
 
 
 ## Prompt Compiler Variants
