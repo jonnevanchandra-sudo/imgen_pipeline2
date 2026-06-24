@@ -4,8 +4,13 @@ CLAUDE.md
 # Superseded framework versions (kept locally for reference, not pushed)
 5. Scene-Assembly.md
 5.1 Scene-Assembly.md
-5.2 Scene-Assembly.md
 6. Composition_Rendering.md
 1. Campaign_Brief.md
+1.1 Campaign_Brief.md
 8.1 Prompt_Compiler.md
 8.2 Prompt_Compiler.md
+
+# Scrapped ".5" recommendation track (kept locally, not pushed)
+1.5 Visual_Discovery.md
+5.5 Client_Preference_Ingestion.md
+5.2.5 Scene-Assembly.md
