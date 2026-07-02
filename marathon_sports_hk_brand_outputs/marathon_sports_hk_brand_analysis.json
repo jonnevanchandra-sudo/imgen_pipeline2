@@ -1,0 +1,607 @@
+{
+  "metadata": {
+    "brand": "Marathon Sports HK / 馬拉松",
+    "market_context": "Hong Kong multi-brand sports retail, athletic footwear, apparel, accessories, and sports lifestyle commerce",
+    "framework_version": "Brand Intelligence Framework v7.0 + JSON brand analysis schema",
+    "generated_at_utc": "2026-06-24T07:01:34+00:00",
+    "reference_set": [
+      "Uploaded ZIP: hk_branch.zip",
+      "Normalized social data: marathon_social_posts.csv/json",
+      "Raw social data: raw_instagram_posts.json, raw_facebook_posts.json",
+      "Downloaded media assets: 214 images in images/facebook and images/instagram",
+      "Uploaded prompt file: brand_analysis(2).py",
+      "Website reviewed: https://marathonsports.hkstore.com/marathon_en_us/",
+      "Website About page reviewed: https://marathonsports.hkstore.com/marathon_en_us/about-us"
+    ],
+    "scrape_window": {
+      "start_date": "2026-04-24",
+      "end_date": "2026-06-24",
+      "instagram_posts": 47,
+      "facebook_posts": 52,
+      "normalized_total_posts": 99,
+      "unique_caption_groups": 64,
+      "downloaded_media_count": 214,
+      "media_download_error_count": 0
+    },
+    "limitations": [
+      "The social dataset is a two-month snapshot and should be treated as a strong recent-behavior signal rather than a complete historical brand audit.",
+      "The website is dynamic ecommerce content; product categories, promotions, and homepage modules may change over time.",
+      "Five visible Instagram collaboration posts were retained because they appeared in the Marathon Sports HK profile feed, even where raw owner usernames belonged to partner accounts."
+    ]
+  },
+  "color_palette": [
+    {
+      "hex": "#E31B23",
+      "label": "Marathon Red",
+      "usage": "Primary logo/accent color; urgency, sale, sport-energy headlines"
+    },
+    {
+      "hex": "#FFFFFF",
+      "label": "Retail White",
+      "usage": "Product clarity, ecommerce whitespace, poster background, copy legibility"
+    },
+    {
+      "hex": "#111111",
+      "label": "Performance Black",
+      "usage": "High-contrast product panels, football/night-match energy, strong headline grounding"
+    },
+    {
+      "hex": "#0B2240",
+      "label": "Stadium Navy",
+      "usage": "Football campaign depth, night-event posters, premium sport contrast"
+    },
+    {
+      "hex": "#0EA1E1",
+      "label": "Active Sky Blue",
+      "usage": "Family/Father's Day and tech-performance modules; freshness and motion"
+    },
+    {
+      "hex": "#D7C2A7",
+      "label": "Hong Kong Café Beige",
+      "usage": "Local culture collaborations, coffee/tea nostalgia, soft lifestyle warmth"
+    }
+  ],
+  "extended_palette_observed_from_assets": [
+    {
+      "hex": "#2F6B4F",
+      "label": "Cha Chaan Teng Green",
+      "observed_context": "Hong Kong Vibes / café collaboration graphics and tiled interiors"
+    },
+    {
+      "hex": "#AA1E1C",
+      "label": "Promo Deep Red",
+      "observed_context": "Football and giveaway poster urgency"
+    },
+    {
+      "hex": "#B3D4E3",
+      "label": "Soft Family Blue",
+      "observed_context": "Father's Day and approachable gift-guide creative"
+    },
+    {
+      "hex": "#232020",
+      "label": "Deep Poster Black",
+      "observed_context": "High-drama football and product announcement backgrounds"
+    }
+  ],
+  "typography": {
+    "headingFont": "Noto Sans TC Black",
+    "bodyFont": "Noto Sans TC",
+    "headingWeight": 900,
+    "bodyWeight": 400,
+    "letterSpacing": "-0.2px",
+    "lineHeight": 1.45,
+    "latinAccentFont": "DIN Condensed / Oswald-style condensed sans",
+    "observed_typographic_behavior": [
+      "Large, bold Cantonese headlines dominate social graphics.",
+      "English product names and campaign phrases are used as compact visual accents.",
+      "CTA and mechanics copy often appears in smaller structured blocks below the hook.",
+      "Typography prioritizes impact and retail clarity over editorial restraint."
+    ]
+  },
+  "tone_of_voice": [
+    {
+      "label": "Energetic",
+      "active": true,
+      "confidence": 94,
+      "evidence": "Frequent emoji, exclamation marks, sports-event framing, urgent product and campaign language."
+    },
+    {
+      "label": "Local Cantonese",
+      "active": true,
+      "confidence": 92,
+      "evidence": "Dominant use of colloquial Traditional Chinese/Cantonese, Hong Kong cultural phrases, tea/coffee collaboration language."
+    },
+    {
+      "label": "Promotional",
+      "active": true,
+      "confidence": 90,
+      "evidence": "Free gifts, giveaways, limited quantities, discounts, store visit CTAs, and redemption mechanics recur across the dataset."
+    },
+    {
+      "label": "Community Fan Culture",
+      "active": true,
+      "confidence": 84,
+      "evidence": "Football viewing, team kits, match schedules, and collective cheering appear as recurring social contexts."
+    },
+    {
+      "label": "Product-Credible",
+      "active": true,
+      "confidence": 74,
+      "evidence": "Posts include product model names, technology claims, use cases, colors, terrain, breathability, support, and store availability."
+    },
+    {
+      "label": "Minimal Luxury",
+      "active": false,
+      "confidence": 28,
+      "evidence": "The observed system favors high-density retail energy rather than sparse luxury restraint."
+    }
+  ],
+  "design_dna": {
+    "cornerRadius": "8px",
+    "letterSpacing": {
+      "value": "-0.2px",
+      "percent": 55
+    },
+    "lineHeight": {
+      "value": 1.45,
+      "percent": 64
+    },
+    "cornerRadiusVal": {
+      "value": "8px",
+      "percent": 38
+    },
+    "visualDensity": {
+      "value": "high",
+      "percent": 82
+    },
+    "headlineScale": {
+      "value": "oversized",
+      "percent": 86
+    },
+    "emojiIntensity": {
+      "value": "high",
+      "percent": 78
+    },
+    "ctaAggressiveness": {
+      "value": "medium-high",
+      "percent": 76
+    },
+    "platformFormatBias": {
+      "value": "4:5 social poster/carousel",
+      "percent": 87
+    }
+  },
+  "brand_rules": {
+    "doList": [
+      "Lead with a bold Cantonese hook that names the benefit, moment, or cultural trigger immediately.",
+      "Use Marathon red, strong black/white contrast, and one campaign color to keep retail clarity while allowing seasonal variation.",
+      "Keep product, offer, location, and redemption mechanics visible; the brand's audience expects useful shopping information.",
+      "Blend sport performance with everyday Hong Kong lifestyle context: work, study, family, football viewing, weather, and local food culture.",
+      "Use emojis and punctuation as controlled energy markers, especially in social-first assets.",
+      "Preserve the multi-brand curator role: highlight partner brands while keeping Marathon Sports as the accessible shopping gateway.",
+      "Use carousel sequencing for product ranges, color variants, step-by-step mechanics, and match/event schedules."
+    ],
+    "dontList": [
+      "Do not make the voice overly formal, corporate, or English-only for Hong Kong social channels.",
+      "Do not strip out practical details such as store availability, dates, limitations, redemption steps, or product variants.",
+      "Do not treat one seasonal collaboration, football campaign, or character collab as the entire brand identity.",
+      "Do not use muted luxury minimalism as the default; it weakens the observed retail-energy signal.",
+      "Do not over-polish imagery to the point that local in-store immediacy and product accessibility disappear.",
+      "Do not let partner logos overpower Marathon Sports' role as the trusted retail curator."
+    ]
+  },
+  "brand_contract": {
+    "observations": [
+      "The official website describes Marathon Sports as one of Hong Kong's largest multi-brand sports chain stores and frames the offer as one-stop shopping for running, hiking, fitness, sneakers, apparel, and accessories.",
+      "The website states that the online business features over 50 sports brands, territory-wide retail shops, staff service, exclusive promotions, delivery, returns, and a genuine-product assurance under the No Fakes Pledge scheme.",
+      "The uploaded scrape contains 99 normalized social posts from 2026-04-24 to 2026-06-24: 47 Instagram posts and 52 Facebook posts, with 214 downloaded media files and no media download errors.",
+      "The social content is predominantly Traditional Chinese/Cantonese, supported by English product names, global brand names, hashtags, and emoji-driven hooks.",
+      "Exact caption reuse across platforms is common: 31 caption groups were posted across both Facebook and Instagram with identical text.",
+      "The most frequent hashtags include #MarathonSports, #馬拉松, #MarathonSportsHK, #足球狂熱, #馬拉松陪你睇波, #adidasHK, #指定馬拉松門市有售, #香記, #睇波裝備, and #GiveawayHK.",
+      "Promotion and giveaway mechanics appear in 42 of 64 unique caption groups; product/style/gear messaging appears in 40; football/fan culture appears in 24; local culture/food collaborations appear in 18.",
+      "The highest-engagement Instagram posts in the scrape are connected to giveaways, local cultural collaborations, limited items, and Hong Kong food/coffee/tea references.",
+      "Visual assets frequently use 4:5 vertical social graphics. Instagram assets are mostly 1080 x 1350, while Facebook images are generally smaller 4:5 or near-4:5 variants.",
+      "The observed creative system uses bold headline blocks, dense copy, arrows, badges, product cutouts, store/event information, football stadium atmospheres, café-tile motifs, and product-led carousels."
+    ],
+    "recurring_patterns": [
+      {
+        "name": "High-Energy Retail Utility",
+        "frequency": "Very High",
+        "supporting_observations": [
+          "Promotion mechanics recur in 42 unique caption groups",
+          "Most captions include practical CTA and availability details"
+        ]
+      },
+      {
+        "name": "Hong Kong Local Culture Overlay",
+        "frequency": "High",
+        "supporting_observations": [
+          "Hiang Kie / Hong Kong Vibes campaign",
+          "Silver Mona coffee giveaway",
+          "T8 Eat+Run local food apparel campaign"
+        ]
+      },
+      {
+        "name": "Football/Fan Moment Capture",
+        "frequency": "High",
+        "supporting_observations": [
+          "#足球狂熱 and #馬拉松陪你睇波 recur",
+          "Team kits, match schedules, cheering packs, and jersey printing promotions appear repeatedly"
+        ]
+      },
+      {
+        "name": "Multi-Brand Product Curation",
+        "frequency": "Very High",
+        "supporting_observations": [
+          "The site lists a broad brand portfolio",
+          "Social posts repeatedly feature adidas, Nike, ASICS, New Balance, Puma, TEVA, Crocs, T8, arena, and others"
+        ]
+      },
+      {
+        "name": "Carousel-Based Explanation",
+        "frequency": "High",
+        "supporting_observations": [
+          "214 downloaded media files across 99 posts",
+          "Posts use multiple images for colorways, product variants, events, and redemption details"
+        ]
+      }
+    ],
+    "inferences": [
+      {
+        "statement": "Marathon Sports HK behaves less like a pure performance-specialist brand and more like a local sports-life curator.",
+        "confidence": 0.89,
+        "rationale": "Performance products are present, but the brand repeatedly wraps them in shopping convenience, fandom, weather, family gifting, and Hong Kong cultural moments."
+      },
+      {
+        "statement": "Promotion is not just a sales tactic; it is part of the brand's social participation language.",
+        "confidence": 0.86,
+        "rationale": "Free gifts, giveaways, instant prizes, limited quantities, and redemption instructions recur and also align with higher engagement posts."
+      },
+      {
+        "statement": "Hong Kong cultural specificity is a meaningful identity layer for current social creative.",
+        "confidence": 0.82,
+        "rationale": "The dataset repeatedly uses local food, tea/coffee, cha chaan teng nostalgia, Cantonese colloquial phrasing, and Hong Kong-specific store/event contexts."
+      },
+      {
+        "statement": "The brand's visual discipline favors recognition and urgency over minimal premium restraint.",
+        "confidence": 0.88,
+        "rationale": "Social assets are dense, headline-heavy, high-contrast, and functional, with visual devices that quickly communicate offers and contexts."
+      },
+      {
+        "statement": "The audience is broader than committed runners; it includes family shoppers, football fans, style seekers, students, office workers, and casual sports-lifestyle consumers.",
+        "confidence": 0.84,
+        "rationale": "Official site categories and recent campaigns span running, hiking, fitness, football, family gifting, coffee breaks, rainy-day dressing, and lifestyle collaborations."
+      }
+    ],
+    "signal_classification": {
+      "core_signals": [
+        "Accessible multi-brand sports retail",
+        "Energetic Cantonese retail voice",
+        "Hong Kong lifestyle proximity",
+        "Product and promotion clarity",
+        "Trust and authenticity as a merchant"
+      ],
+      "adaptive_signals": [
+        "Emoji density",
+        "Campaign-specific color systems",
+        "Carousel sequencing",
+        "Partner-brand visual co-branding",
+        "Product cutouts and CTA badges"
+      ],
+      "context_signals": [
+        "2026 football fever campaign",
+        "Father's Day and Mother's Day coffee/tea promotions",
+        "Specific adidas / ASICS / TEVA / Crocs / T8 product drops",
+        "Seasonal rain, summer, exam, and long-weekend hooks"
+      ]
+    },
+    "brand_identity": {
+      "personality": [
+        "energetic",
+        "local",
+        "practical",
+        "inclusive",
+        "sporty",
+        "deal-savvy",
+        "community-minded"
+      ],
+      "core_values": [
+        "accessibility",
+        "authentic products",
+        "sports participation",
+        "everyday usefulness",
+        "local relevance",
+        "choice"
+      ],
+      "positioning": "A trusted Hong Kong sports retail gateway that makes international athletic brands, sports lifestyle products, and timely local offers easy to discover and buy.",
+      "emotional_role": "A lively shopping companion that helps customers feel ready for sport, weather, fandom, family moments, and everyday city life.",
+      "confidence_style": "Confident through clarity, availability, real offers, recognizable partner brands, and familiar Hong Kong cultural language."
+    },
+    "audience_identity": [
+      {
+        "target_audience": "Sports-lifestyle shoppers",
+        "aspirational_identity": "Ready, stylish, and functionally equipped for active city life",
+        "lifestyle_aspiration": "Move easily between commute, casual sport, shopping, and social outings",
+        "status_signaling": "Knows current drops, useful gear, and recognized sports brands",
+        "self_image_projection": "Practical but trend-aware"
+      },
+      {
+        "target_audience": "Football fans and kit collectors",
+        "aspirational_identity": "Part of the citywide match-day energy",
+        "lifestyle_aspiration": "Support teams, watch games, wear jerseys, and join social moments",
+        "status_signaling": "Has the right shirt, print, accessory, and fan bundle",
+        "self_image_projection": "Loyal, expressive, and plugged into sport culture"
+      },
+      {
+        "target_audience": "Family and gift shoppers",
+        "aspirational_identity": "Thoughtful shopper who chooses useful active gifts",
+        "lifestyle_aspiration": "Care for parents, partners, and children through practical products and seasonal offers",
+        "status_signaling": "Makes timely, caring, good-value purchases",
+        "self_image_projection": "Considerate and smart with value"
+      },
+      {
+        "target_audience": "Runners, hikers, and performance gear seekers",
+        "aspirational_identity": "Prepared for better movement and outdoor activity",
+        "lifestyle_aspiration": "Upgrade footwear, apparel, support, comfort, and weather readiness",
+        "status_signaling": "Chooses credible international sports technologies",
+        "self_image_projection": "Capable and improvement-oriented"
+      }
+    ],
+    "communication_philosophy": {
+      "information_density": "High",
+      "restraint_level": "Low-to-medium; energetic and promotional rather than quiet",
+      "persuasion_style": "Benefit-first retail persuasion supported by social relevance, scarcity, and clear redemption mechanics",
+      "cta_aggressiveness": "Medium-high",
+      "show_vs_tell_balance": "Tell-led in captions and headline graphics, supported by product photos and in-store proof"
+    },
+    "emotional_positioning": {
+      "tone": [
+        "excited",
+        "helpful",
+        "locally witty",
+        "deal-driven",
+        "sport-fan energetic"
+      ],
+      "emotional_maturity": "Mass-market approachable with selective lifestyle sophistication during collaborations",
+      "emotional_pacing": "Fast hook, compact context, detailed mechanics, direct CTA",
+      "aspiration_style": "Accessible aspiration: join the moment, get the right gear, enjoy the city, and feel prepared."
+    },
+    "rendering_style": {
+      "lighting_philosophy": "Bright retail/product clarity, with darker stadium/drama palettes for football campaigns",
+      "realism_level": "Commercial-realistic; product and in-store assets are often straightforward, while campaign graphics are stylized",
+      "color_philosophy": "Campaign-led colors anchored by red, black, white, blue, and local-culture beige/green palettes",
+      "atmosphere": "Busy, energetic, useful, event-aware, and local",
+      "texture_language": "Product textures, café tiles, paper tickets, stadium backgrounds, badges, handwritten arrows, and shop/event environments",
+      "polish_level": "Functional commercial polish rather than luxury editorial polish"
+    },
+    "composition_behavior": {
+      "hierarchy_sophistication": "Medium: clear retail hierarchy, not minimalist editorial hierarchy",
+      "layout_density": "High",
+      "whitespace_behavior": "Whitespace is used for legibility but often filled with mechanics, badges, arrows, product variants, and CTA notes",
+      "eye_flow": "Headline first, product/offer second, details and terms third, brand/partner marks last",
+      "visual_pacing": "Fast social poster pacing with carousel reinforcement"
+    },
+    "creative_maturity": {
+      "hierarchy_sophistication": 0.72,
+      "restraint_confidence": 0.42,
+      "emotional_subtlety": 0.48,
+      "visual_discipline": 0.68,
+      "premium_signal_strength": 0.46,
+      "trend_sophistication": 0.74,
+      "summary": "Mature in retail timing, partnership relevance, and social utility; less mature in minimal premium consistency because the brand intentionally optimizes for mass-market clarity and campaign energy."
+    },
+    "core_tensions": [
+      {
+        "competing_forces": "Performance credibility ↔ Everyday lifestyle accessibility",
+        "supporting_evidence": [
+          "Running, hiking, and fitness positioning",
+          "OOTD, coffee, football viewing, and family-gifting posts"
+        ],
+        "confidence": 0.88
+      },
+      {
+        "competing_forces": "International sports brands ↔ Local Hong Kong cultural identity",
+        "supporting_evidence": [
+          "Nike/adidas/ASICS/New Balance/Crocs product posts",
+          "Hiang Kie, Silver Mona, T8 Eat+Run, Hong Kong Vibes creative"
+        ],
+        "confidence": 0.84
+      },
+      {
+        "competing_forces": "Commercial urgency ↔ Community participation",
+        "supporting_evidence": [
+          "Giveaways and limited redemption mechanics",
+          "Football cheering packs and match schedule content"
+        ],
+        "confidence": 0.83
+      },
+      {
+        "competing_forces": "Dense retail information ↔ Visual simplicity",
+        "supporting_evidence": [
+          "High average caption length",
+          "Posters combine headline, product, offer, dates, hashtags, and instructions"
+        ],
+        "confidence": 0.8
+      }
+    ],
+    "creative_tradeoffs": [
+      {
+        "tradeoff": "Information richness ↔ Minimal elegance",
+        "dominant_side": "Information richness",
+        "supporting_evidence": [
+          "Captions average more than 500 characters",
+          "Graphics contain numerous CTA and detail modules"
+        ],
+        "confidence": 0.86
+      },
+      {
+        "tradeoff": "Immediate campaign relevance ↔ Long-term visual consistency",
+        "dominant_side": "Immediate campaign relevance",
+        "supporting_evidence": [
+          "Football, café, family, rain, summer, and product-drop creative each receive their own visual codes"
+        ],
+        "confidence": 0.81
+      },
+      {
+        "tradeoff": "Partner-brand prominence ↔ Own-brand distinctiveness",
+        "dominant_side": "Partner-brand prominence with Marathon Sports as curator",
+        "supporting_evidence": [
+          "Global brand names and collaboration names often lead the post, while Marathon Sports carries availability and trust"
+        ],
+        "confidence": 0.78
+      },
+      {
+        "tradeoff": "Mass accessibility ↔ Premium selectivity",
+        "dominant_side": "Mass accessibility",
+        "supporting_evidence": [
+          "Deals, free gifts, family shoppers, and one-stop shopping dominate the communication system"
+        ],
+        "confidence": 0.84
+      }
+    ],
+    "sacred_brand_assets": {
+      "visual": [
+        "Marathon Sports red wordmark / logo presence",
+        "High-contrast retail posters",
+        "Product-first images and clear product naming",
+        "Campaign badges, arrows, offer blocks, and carousel sequencing",
+        "Local Hong Kong cultural motifs when culturally relevant"
+      ],
+      "emotional": [
+        "Energetic helpfulness",
+        "Local Hong Kong familiarity",
+        "Retail excitement and timely value",
+        "Inclusive sports participation"
+      ],
+      "narrative": [
+        "One-stop sports shopping",
+        "Trusted genuine products",
+        "International brands made locally relevant",
+        "Get ready for the current moment: weather, match, holiday, drop, or family occasion"
+      ]
+    },
+    "strategic_implications": [
+      {
+        "description": "Future creative systems should preserve the brand's Cantonese retail-energy voice and not replace it with generic global sports copy.",
+        "supporting_evidence": [
+          "Predominantly Cantonese captions",
+          "Local idioms and Hong Kong campaign references"
+        ],
+        "implication_confidence": 0.9
+      },
+      {
+        "description": "Dynamic campaign templates should allow seasonal color and partner-brand changes while preserving headline-first, offer-clear hierarchy.",
+        "supporting_evidence": [
+          "Repeated campaign-specific visual systems",
+          "Consistent practical CTA and product detail behavior"
+        ],
+        "implication_confidence": 0.86
+      },
+      {
+        "description": "Social-first assets are likely to perform best when they combine value mechanics with cultural participation rather than pure product listing.",
+        "supporting_evidence": [
+          "Top-liked posts are giveaways/collaborations",
+          "Promotion and local culture categories overlap frequently"
+        ],
+        "implication_confidence": 0.83
+      },
+      {
+        "description": "Instagram should remain a high-priority channel for engagement-led campaigns, with Facebook useful for reach, details, and shareable event mechanics.",
+        "supporting_evidence": [
+          "Instagram average likes were substantially higher in the scrape",
+          "Facebook accumulated more shares than Instagram because share data was present for Facebook"
+        ],
+        "implication_confidence": 0.76
+      }
+    ]
+  },
+  "social_content_metrics": {
+    "platform_counts": {
+      "facebook": 52,
+      "instagram": 47
+    },
+    "unique_caption_groups": 64,
+    "exact_cross_platform_caption_groups": 31,
+    "category_counts_unique_captions": {
+      "promotion_giveaway": 42,
+      "product_style_gear": 40,
+      "football_sports_fandom": 24,
+      "local_culture_food_collab": 18,
+      "seasonal_performance": 13,
+      "family_life_stage": 6,
+      "other": 1
+    },
+    "top_hashtags_unique_captions": [
+      [
+        "#marathonsports",
+        36
+      ],
+      [
+        "#馬拉松",
+        21
+      ],
+      [
+        "#marathonsportshk",
+        21
+      ],
+      [
+        "#足球狂熱",
+        15
+      ],
+      [
+        "#馬拉松陪你睇波",
+        9
+      ],
+      [
+        "#adidashk",
+        7
+      ],
+      [
+        "#指定馬拉松門市有售",
+        7
+      ],
+      [
+        "#睇波裝備",
+        6
+      ],
+      [
+        "#giveawayhk",
+        6
+      ],
+      [
+        "#gigasports",
+        6
+      ],
+      [
+        "#香記",
+        6
+      ]
+    ],
+    "engagement_snapshot": {
+      "instagram": {
+        "posts": 47,
+        "likes_sum": 4602,
+        "likes_mean": 97.91,
+        "comments_sum": 2204
+      },
+      "facebook": {
+        "posts": 52,
+        "likes_sum": 637,
+        "likes_mean": 12.25,
+        "shares_sum": 115
+      }
+    },
+    "media_dimensions_observed": {
+      "instagram": {
+        "1080x1350": 100,
+        "other": 9
+      },
+      "facebook": {
+        "472x590": 81,
+        "512x640": 18,
+        "other": 6
+      }
+    }
+  },
+  "creative_summary": "Marathon Sports HK is a high-energy Hong Kong sports retail curator: it turns international sports brands into timely, practical, locally fluent shopping moments."
+}
