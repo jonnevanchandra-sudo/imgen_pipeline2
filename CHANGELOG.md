@@ -22,6 +22,12 @@ Entries below are ordered by where the stage sits in the pipeline (execution ord
 
 ---
 
+**0. Brand Intelligence.v2.md** — existing file, updated Communication Philosophy output format and Emotional Positioning routing
+- `CommunicationPhilosophy` output format changed to integers 0–100 only — removes descriptive labels (Low/Medium/High); all five dimensions (Information density, Restraint level, Persuasion style, CTA aggressiveness, Show-vs-tell balance) now output as numeric values exclusively
+- `EmotionalPositioning` is now explicitly passed as an input to Stage 3 (Narrative) — previously implicit; Narrative reads `BrandContract.EmotionalPositioning` (tone, maturity, pacing, aspiration style) as a direct source when constructing the emotional arc
+
+---
+
 **1.1 Campaign_Brief.md** — new file, extends 1.0 without touching it
 - adds `ProductSpec` inside `MandatoryRequirements`
 - use this when a campaign needs a specific product model in the image
@@ -57,6 +63,9 @@ Entries below are ordered by where the stage sits in the pipeline (execution ord
 - adds three new Perceptual Validation assertions for the independent VLM Critic: Skin Naturalism Assertion, Depth of Field Realism Assertion, Pose Variation Assertion
 - adds Depth of Field Category Selection: aperture must come from one of three categories — Environmental Context (`f/8`-`f/11`, background carries part of the story), Atmospheric/Soft Focus (`f/4`-`f/5.6`, the **default**), or Commercial Isolation (`f/1.8`-`f/2.8`, background communicates nothing); selection is driven by `HierarchyPlan`/`AttentionPlan`, giving the existing "scene readability" requirement concrete decision criteria and preventing AI image generators from defaulting to overly blurry backgrounds
 - adds `CameraPlan.depth_of_field_category` field; `aperture_f_stop` must fall within the selected category's range; `OpticalPlan.bokeh_behavior` and the Depth of Field Realism falloff shape must match the selected category's character
+- adds `BrandContract.RenderingStyle` and `BrandContract.CompositionBehavior` as explicit inputs — field paths now named directly in the Inputs section rather than labeled generically as "Optional"; Brand Contract inputs are treated as default behavior, overridden by Hierarchy, Emotional, or Reality Model requirements
+- `BrandContract.RenderingStyle` added as priority 4 in Rendering Inference — default baseline for lighting, color, atmosphere, and realism when hierarchy, emotional, and reality model requirements do not specify otherwise
+- `BrandContract.CompositionBehavior` Eye flow and Layout density added as priority 4 in Visual Flow Principles — default eye flow and density when hierarchy, attention, and narrative leave the choice open
 
 ---
 

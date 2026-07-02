@@ -39,7 +39,7 @@ VisualPrompt
 | `4. Art-Direction-framework-v3.md` | 4 | Visual interpretation and structural density | Strategy Contract and Narrative Contract |
 | `5a Image_Analysis.md` | 5a | Extract attributes from client reference images (optional pre-step, already combined in 5.2) | Reference images uploaded by the user |
 | `5.2 Scene-Assembly.md` | 5 | Entities, spatial layout (relative scale), reference asset locking | (Global Pipeline State) Art Direction Contract, Campaign Contract |
-| `6.1 Composition_Rendering.md` | 6 | Camera, lighting, depth of field, materials | Scene Contract |
+| `6.1 Composition_Rendering.md` | 6 | Camera, lighting, depth of field, materials | Brand Contract, Scene Contract |
 | `7.1 Synthesis.md` | 7 | Consolidate all contracts, resolve conflicts | Campaign Contract, Brand Contract, Strategy Contract, Narrative Contract, Art Direction Contract, Scene Contract, Composition Rendering Contract |
 | `8.1.1 Prompt_Compiler.md` | 8 | Translate to final image generation prompt | Synthesis Contract |
 
@@ -138,4 +138,11 @@ VisualPrompt
 
 ## Core Rule
 
-Every stage may **influence** downstream decisions but must **never directly make** them. Art Direction does not specify lighting. Narrative does not specify camera angles. Violations contaminate the layer boundary and make the pipeline unpredictable.
+Every stage may **influence** downstream decisions but must **never directly make** them. Art Direction does not specify lighting. Narrative does not specify camera angles. Violations contaminate the layer boundary and make the pipeline unpredictable. 
+
+Hierarchy Priority is :
+1. Narrative : The subject is the story, make them primary
+2. Preservation : If there's an asset that wants to be preserved, it's given a high priority
+3. Emotional : How intense the subject narrative should be
+4. Environmental : Does the setting communicates something?
+5. Brand defaults : Default setting of the layout density and sophistication
